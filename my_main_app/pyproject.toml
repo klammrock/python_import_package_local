@@ -1,0 +1,20 @@
+[project]
+name = "my-main-app"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Valery Baranov",email = "v.baranov@integer-soft.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "my-lib @ file:///home/klamm/projects/python/import_package/my_lib"
+]
+
+[tool.poetry]
+packages = [{include = "my_main_app", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
